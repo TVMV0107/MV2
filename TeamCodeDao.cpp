@@ -81,9 +81,9 @@ void UocSoLeLonNhat(int n)
 
 void KiemTraSoNguyento(int n)
 {
-	int s=0;
+	int s = 0;
 	if (NTo(n)==true)
-		cout<<n<<" la so Nguyen To";
+		cout<< n <<" la so Nguyen To";
 	else
 		cout<<n<<" khong la so nguyen to";
 }
@@ -97,13 +97,15 @@ bool KiemTraSHT(int n)
 	if (s==n) return true;
 	return false;
 }
+
 void KiemTraSoHoanThien(int n)
 {
-	if (KiemTraSHT(n)==true)
-		cout<<n<<" La so hoan thien";
+	if (KiemTraSHT(n) == true)
+		cout << n << " La so hoan thien";
 	else
-		cout<<n<<" la so khong hoan thien";
+		cout << n << " la so khong hoan thien";
 }
+
 int main()
 {
 	int n;
@@ -120,10 +122,9 @@ int main()
 	cout << "Bai6 - Tong cac uoc nho hon " << n << " la: " << tinhTongUocNho(n) << endl;
 	cout << "Bai 7 - Uoc le lon nhat cua " << n << " la: ";
 	UocSoLeLonNhat(n);
-    cout << "\nBai 8 - ";
+    	cout << "\nBai 8 - ";
 	KiemTraSoNguyento(n);
 	cout << "\nBai 9 - ";
 	KiemTraSoHoanThien(n);
-	cout<<"\n---------------------------------";
 	return 0;
 }
