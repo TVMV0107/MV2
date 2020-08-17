@@ -63,7 +63,8 @@ int demSoLuongUoc(int n)
 }
 bool NTo(int n)
 {
-	if (n<2) return false;
+	if (n<2) 
+		return false;
 	for (int i=2;i<=sqrt(n);i++)
 		if (n%2==0)
 		 return false;
@@ -81,9 +82,9 @@ void UocSoLeLonNhat(int n)
 
 void KiemTraSoNguyento(int n)
 {
-	int s = 0;
+	int s=0;
 	if (NTo(n)==true)
-		cout<< n <<" la so Nguyen To";
+		cout<<n<<" la so Nguyen To";
 	else
 		cout<<n<<" khong la so nguyen to";
 }
@@ -94,18 +95,17 @@ bool KiemTraSHT(int n)
 	for (int i=1;i<n;i++)
 	 if (n % i==0)
 	 	s+=i;
-	if (s==n) return true;
+	if (s==n) 
+		return true;
 	return false;
 }
-
 void KiemTraSoHoanThien(int n)
 {
-	if (KiemTraSHT(n) == true)
-		cout << n << " La so hoan thien";
+	if (KiemTraSHT(n)==true)
+		cout<<n<<" La so hoan thien";
 	else
-		cout << n << " la so khong hoan thien";
+		cout<<n<<" la so khong hoan thien";
 }
-
 int main()
 {
 	int n;
@@ -115,14 +115,14 @@ int main()
 	lietKeNguyenDuong(n);
 	cout<<endl;
 	cout<<"Bai 2 - Tong cac uoc so nguyen duong cua "<<n<<" :"<<sumUocNguyenDuongN(n)<<endl;
-	cout<<"Bai 3 - So uoc cua "<<n<<" :"<<demSoLuongUoc(n) << endl;
+	cout<<"Bai 3 - So uoc cua " << n << " :"<<demSoLuongUoc(n) << endl;
 	cout<<"Bai 4 - Liet ke cac uoc so LE cua "<<n<<" :";
 	lietKeUocLe(n);
 	cout << "\nBai 5 - Tong cac uoc chan cua " << n << " la: " << tinhTongUocChan(n) << endl;
 	cout << "Bai6 - Tong cac uoc nho hon " << n << " la: " << tinhTongUocNho(n) << endl;
 	cout << "Bai 7 - Uoc le lon nhat cua " << n << " la: ";
 	UocSoLeLonNhat(n);
-    	cout << "\nBai 8 - ";
+    cout << "\nBai 8 - ";
 	KiemTraSoNguyento(n);
 	cout << "\nBai 9 - ";
 	KiemTraSoHoanThien(n);
