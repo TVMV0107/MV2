@@ -6,7 +6,7 @@ void lietKeNguyenDuong(int n)
 {
 	for(int i=1;i<=n;++i)
 	{
-		if(i%2==0)
+		if(n % i == 0)
 		cout<<i<<" ";
 	}
 }
@@ -71,18 +71,16 @@ bool NTo(int n)
 }
 void UocSoLeLonNhat(int n)
 {
-	cout<<endl;
 	for (int i=n;i>=1;i--)
 		if ((n%i==0)&&(i%2!=0))
 		{
-			cout<<"US le lon nhat la: "<<i;
+			cout<< i;
 			break;
 		}		
 }
 
 void KiemTraSoNguyento(int n)
 {
-	cout<<endl;
 	int s=0;
 	if (NTo(n)==true)
 		cout<<n<<" la so Nguyen To";
@@ -101,11 +99,10 @@ bool KiemTraSHT(int n)
 }
 void KiemTraSoHoanThien(int n)
 {
-	cout<<endl;
 	if (KiemTraSHT(n)==true)
-		cout<<n<<"La so hoan thien";
+		cout<<n<<" La so hoan thien";
 	else
-		cout<<n<<"la so khong hoan thien";
+		cout<<n<<" la so khong hoan thien";
 }
 int main()
 {
@@ -116,18 +113,17 @@ int main()
 	lietKeNguyenDuong(n);
 	cout<<endl;
 	cout<<"Bai 2 - Tong cac uoc so nguyen duong cua "<<n<<" :"<<sumUocNguyenDuongN(n)<<endl;
-	cout<<"Bai 3 - So uoc cua "<<n<<" :"<<demSoLuongUoc(n);
+	cout<<"Bai 3 - So uoc cua "<<n<<" :"<<demSoLuongUoc(n) << endl;
+	cout<<"Bai 4 - Liet ke cac uoc so LE cua "<<n<<" :";
 	lietKeUocLe(n);
-	cout<<"\nBai 4 - Tong cac uoc so nguyen duong cua "<<n<<" :"<<sumUocNguyenDuongN(n);
-	cout << "\nbai 5 - Tong cac uoc chan cua " << n << " la: " << tinhTongUocChan(n) << endl;
-	cout << "\nBai6 - Tong cac uoc nho hon " << n << " la: " << tinhTongUocNho(n) << endl;
-	
-	cout<<"Tong cac uoc so nguyen duong cua "<<n<<" :"<<sumUocNguyenDuongN(n);
-	cout << "\nTong cac uoc chan cua " << n << " la: " << tinhTongUocChan(n) << endl;
-	cout << "\nTong cac uoc nho hon " << n << " la: " << tinhTongUocNho(n) << endl;
-	cout<<"---------------------------------";
+	cout << "\nBai 5 - Tong cac uoc chan cua " << n << " la: " << tinhTongUocChan(n) << endl;
+	cout << "Bai6 - Tong cac uoc nho hon " << n << " la: " << tinhTongUocNho(n) << endl;
+	cout << "Bai 7 - Uoc le lon nhat cua " << n << " la: ";
 	UocSoLeLonNhat(n);
-    KiemTraSoNguyento(n);
+    cout << "\nBai 8 - ";
+	KiemTraSoNguyento(n);
+	cout << "\nBai 9 - ";
 	KiemTraSoHoanThien(n);
+	cout<<"\n---------------------------------";
 	return 0;
 }
