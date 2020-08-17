@@ -122,7 +122,7 @@ int main()
 	cout << "Bai6 - Tong cac uoc nho hon " << n << " la: " << tinhTongUocNho(n) << endl;
 	cout << "Bai 7 - Uoc le lon nhat cua " << n << " la: ";
 	UocSoLeLonNhat(n);
-    	cout << "\nBai 8 - ";
+    cout << "\nBai 8 - ";
 	KiemTraSoNguyento(n);
 	cout << "\nBai 9 - ";
 	KiemTraSoHoanThien(n);
